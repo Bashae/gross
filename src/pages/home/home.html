@@ -1,0 +1,45 @@
+<ion-content>
+  <ion-slides *ngIf="posts">
+    <ion-slide *ngFor="let post of posts">
+      <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{post.user_image}}">
+          </ion-avatar>
+          <h2>{{post.user_name}}</h2>
+          <p>{{post.post_date}}</p>
+        </ion-item>
+      
+        <img src="{{post.image}}">
+      
+        <ion-card-content>
+          <p>{{post.description}}</p>
+        </ion-card-content>
+      
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-start clear small (click)="likePost(post)">
+              <ion-icon name="nuclear"></ion-icon>
+              <div>{{post.like_count}} Ewwww!</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="chatboxes"></ion-icon>
+              <div>{{post.comment_count}} Comments</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+    <!-- <ion-slide *ngFor="let post of posts">
+      <h2>Comments: {{post.comment_count}}</h2>
+      <h2>Likes: {{post.like_count}}</h2>
+      <h2>Description: {{post.description}}</h2>
+      <h2>Image: {{post.image}}</h2>
+      <h2>Title: {{post.title}}</h2>
+    </ion-slide> -->

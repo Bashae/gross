@@ -1,0 +1,22 @@
+page-register {
+    .registration {
+        background: #333;
+
+        &_title {
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+        }
+        &_image {
+            margin: 0 auto 20px auto;
+            width: 50%;
+            border-radius: 50%;
+            text-align: center;
+        }
+        &_button--submit {
+            .button-inner {
+                color: #fff;
+            }
+        }
+    }
+}

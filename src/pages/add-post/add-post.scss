@@ -1,0 +1,15 @@
+page-add-post {
+  ion-list {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .button--submit {
+    float:right;
+    margin-right: 10px;
+
+    .button-inner {
+        color: #fff;
+    }
+  }
+}

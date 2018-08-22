@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Close</button>
+    </ion-buttons>
+    <ion-title>Add Something Gross</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+      <input type="file" ion-button block (change)="onFileSelect($event)" />
+      <ion-item>
+        <ion-label fixed>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="description"></ion-input>
+      </ion-item>
+    </ion-list>
+    
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{userInfo.image}}">
+        </ion-avatar>
+        <h2>{{userInfo.name}}</h2>
+        <p>November 12, 1987</p>
+      </ion-item>
+
+      <img src="{{downloadURL}}">
+
+      <ion-card-content>
+        <!-- <p>{{description}}</p>
+        <p>info</p>
+        <p>{{info}}</p> -->
+        <!-- <p>{{ev}}</p>
+        <p>{{imageURL}}</p> -->
+      </ion-card-content>
+    </ion-card>
+    <button ion-button medium class="button--submit">Submit</button>
+</ion-content>

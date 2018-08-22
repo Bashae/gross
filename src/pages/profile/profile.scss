@@ -1,0 +1,25 @@
+page-profile {
+    .profile {
+        background: #333;
+
+        &_user-image {
+            margin: 0 auto;
+            text-align: center;
+            width: 50%;
+        }
+        &_user-name {
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            margin-top: 10px;
+        }
+        &_button--follow-user {
+            display: inline;
+            margin: 0 auto 20px auto;
+
+            .button-inner {
+                color: #fff;
+            }
+        }
+    }
+}

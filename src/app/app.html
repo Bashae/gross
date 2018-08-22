@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <img class="navbar-avatar" *ngIf="auth.user" (click)="openPage('profile')" src="https://firebasestorage.googleapis.com/v0/b/gross-96f28.appspot.com/o/andyroi.jpg?alt=media&token=9595b759-ccf5-457c-92d1-4c7b99852f20" alt="">
+
+        <button ion-button icon-only add-item (click)="toggleModal()" class="button--add-item">
+            <ion-icon name="add-circle"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title class="menu-title">Holy $#!%</ion-title>
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+        <!-- <button ion-item>
+            Featured
+        </button>
+        <button ion-item>
+            Video
+        </button>
+        <button ion-item>
+            Collective
+        </button>
+        <button ion-item>
+            Subscriptions
+        </button>
+        <button ion-item>
+            Explore
+        </button>
+        <button ion-item>
+            Profile
+        </button> -->
+        <button ion-item (click)="openPage('home')" menuClose>
+            Home Page
+        </button>
+        <button ion-item (click)="openPage('login')" *ngIf="!auth.state" menuClose>
+            Login Page
+        </button>
+        <button ion-item (click)="openPage('register')" *ngIf="!auth.state" menuClose>
+            Register Page
+        </button>
+        <button ion-item (click)="openPage('logout')" *ngIf="auth.state" menuClose>
+            Logout
+        </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

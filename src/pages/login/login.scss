@@ -1,0 +1,19 @@
+page-login {
+    .login {
+        background: #333;
+
+        &_title {
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+        }
+        &_image {
+            text-align: center;
+        }
+        &_button--submit {
+            .button-inner {
+                color: #fff;
+            }
+        }
+    }
+}
